@@ -1,0 +1,4 @@
+obj/
+hoverclock
+.clang-format
+compile_flags.txt

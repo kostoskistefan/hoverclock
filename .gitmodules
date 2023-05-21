@@ -1,0 +1,6 @@
+[submodule "source/vault"]
+	path = source/vault
+	url = https://github.com/kostoskistefan/vault
+[submodule "source/inthreadval"]
+	path = source/inthreadval
+	url = https://github.com/kostoskistefan/inthreadval
