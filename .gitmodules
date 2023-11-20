@@ -1,6 +1,9 @@
-[submodule "source/vault"]
-	path = source/vault
-	url = https://github.com/kostoskistefan/vault
-[submodule "source/inthreadval"]
-	path = source/inthreadval
+[submodule "subprojects/insight"]
+	path = subprojects/insight
+	url = https://github.com/kostoskistefan/insight
+[submodule "subprojects/inthreadval"]
+	path = subprojects/inthreadval
 	url = https://github.com/kostoskistefan/inthreadval
+[submodule "subprojects/vault"]
+	path = subprojects/vault
+	url = https://github.com/kostoskistefan/vault
