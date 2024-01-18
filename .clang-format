@@ -62,7 +62,7 @@ IndentExternBlock: Indent
 IndentPPDirectives: None
 IndentWidth: 4
 IndentWrappedFunctionNames: true
-InsertBraces: false
+InsertBraces: true
 InsertTrailingCommas: None
 LambdaBodyIndentation: Signature
 Language: Cpp

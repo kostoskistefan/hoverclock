@@ -64,7 +64,9 @@ void surface_blur(surface_s *const surface, const uint8_t radius, const uint8_t 
                     const int32_t kernel_row_offset = row + kernel_row;
 
                     if (kernel_row_offset >= surface->height)
+                    {
                         continue;
+                    }
 
                     const int32_t kernel_row_stride = kernel_row_offset * surface->stride;
 
@@ -73,7 +75,9 @@ void surface_blur(surface_s *const surface, const uint8_t radius, const uint8_t 
                         const int32_t kernel_column_offset = column + kernel_column;
 
                         if (kernel_column_offset >= surface->width)
+                        {
                             continue;
+                        }
 
                         const int32_t kernel_pixel_index = kernel_row_stride + (kernel_column_offset << 2);
 

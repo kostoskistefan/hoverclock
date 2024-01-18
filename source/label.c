@@ -8,7 +8,7 @@
 
 #define LABEL_SHADOW_BLUR_RADIUS   1
 #define LABEL_SHADOW_BLUR_PASSES   2
-#define LABEL_SHADOW_BLUR_BOX_SIZE ((uint32_t)((LABEL_SHADOW_BLUR_RADIUS + 0.5) * 2))
+#define LABEL_SHADOW_BLUR_BOX_SIZE ((uint32_t) ((LABEL_SHADOW_BLUR_RADIUS + 0.5) * 2))
 #define LABEL_VERTICAL_PADDING     (LABEL_SHADOW_BLUR_RADIUS)
 #define LABEL_HORIZONTAL_PADDING   10
 
@@ -91,7 +91,9 @@ void label_move(label_s *const label, int32_t x, int32_t y)
 void label_set_text(label_s *const label, const char *text)
 {
     if (strncmp(label->text, text, LABEL_MAXIMUM_TEXT_LENGTH) == 0)
+    {
         return;
+    }
 
     strncpy(label->text, text, LABEL_MAXIMUM_TEXT_LENGTH);
 
@@ -136,7 +138,9 @@ void label_clear(struct label_s *const label)
 void label_render(label_s *const label)
 {
     if (label->widget.render_requested == 0)
+    {
         return;
+    }
 
     label_clear(label);
 
@@ -210,7 +214,9 @@ void label_render_character(
 
         // If the current row is outside of the surface, there is no need to continue onto the following rows
         if (pixel_row >= surface->height)
+        {
             break;
+        }
 
         const uint32_t pixel_row_index = pixel_row * surface->width;
         const uint32_t bitmap_row_offset = row * font->glyph->bitmap.width;
@@ -221,13 +227,17 @@ void label_render_character(
 
             // If the current column is outside of the surface, there is no need to continue onto the following columns
             if (pixel_column_index >= surface->width)
+            {
                 break;
+            }
 
             const uint8_t current_pixel = font->glyph->bitmap.buffer[bitmap_row_offset + column];
 
             // If the current glyph pixel is transparent, continue onto the next pixel
             if (current_pixel == 0x00)
+            {
                 continue;
+            }
 
             const uint32_t pixel_index = (pixel_row_index + pixel_column_index) << 2;
 
@@ -272,7 +282,9 @@ char *label_get_font_path_by_font_name(const char *font_name)
     FcConfigDestroy(config);
 
     if (!font)
+    {
         return NULL;
+    }
 
     FcChar8 *file = NULL;
     char *path = NULL;

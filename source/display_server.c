@@ -28,7 +28,9 @@ xcb_atom_t display_server_get_atom(const display_server_s *const display_server,
     xcb_intern_atom_reply_t *reply = xcb_intern_atom_reply(display_server->connection, cookie, NULL);
 
     if (!reply)
+    {
         return XCB_ATOM_NONE;
+    }
 
     xcb_atom_t atom = reply->atom;
 

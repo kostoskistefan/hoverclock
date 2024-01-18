@@ -15,7 +15,9 @@ void settings_load(settings_s *const settings)
     const uint8_t vault_exists = vault_file_exists(vault);
 
     if (vault_exists)
+    {
         vault_load(vault);
+    }
 
     else
     {
@@ -100,4 +102,3 @@ char *settings_get_vault_string(vault_s *const vault, const char *vault_key)
 {
     return strdup(vault_find(vault, vault_key));
 }
-

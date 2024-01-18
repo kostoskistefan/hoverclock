@@ -89,10 +89,14 @@ int main(int argc, char *argv[])
     );
 
     if (settings.time_label_visible)
+    {
         window_add_widget(&window, (widget_s *) &time_label);
+    }
 
     if (settings.date_label_visible)
+    {
         window_add_widget(&window, (widget_s *) &date_label);
+    }
 
     window_calculate_location(
         &window,
@@ -140,7 +144,9 @@ void update_labels_text(void)
 void on_quit_request(int signal_type)
 {
     if (signal_type == SIGINT)
+    {
         window_on_quit_request(&window);
+    }
 }
 
 void setup_signal_handler(void)

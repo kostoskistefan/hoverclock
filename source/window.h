@@ -21,7 +21,6 @@ typedef struct window_s
 
     color_u background_color;
 
-    xcb_expose_event_t *expose_event;
     xcb_client_message_event_t *client_message_event;
 
     const display_server_s *display_server;
