@@ -2,7 +2,10 @@ project(
   'hoverclock',
   'c',
   version: '1.0.0',
-  license: 'MIT'
+  license: 'MIT',
+  default_options: [
+    'warning_level=3',
+  ],
 )
 
 hoverclock_dependencies = [
@@ -10,9 +13,9 @@ hoverclock_dependencies = [
   dependency('xcb-shape'),
   dependency('fontconfig'),
   dependency('freetype2'),
-  dependency('vault', fallback: ['vault', 'vault_dep']),
-  dependency('insight', fallback: ['insight', 'insight_dep']),
-  dependency('inthreadval', fallback: ['inthreadval', 'inthreadval_dep']),
+  subproject('vault').get_variable('vault_dep'),
+  subproject('insight').get_variable('insight_dep'),
+  subproject('inthreadval').get_variable('inthreadval_dep'),
 ]
 
 hoverclock_sources = [
