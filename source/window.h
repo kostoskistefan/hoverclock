@@ -6,8 +6,8 @@
 #include "rectangle.h"
 #include "display_server.h"
 
-#define WINDOW_VERTICAL_PADDING           5
-#define WINDOW_HORIZONTAL_PADDING         5
+#define WINDOW_VERTICAL_PADDING           2
+#define WINDOW_HORIZONTAL_PADDING         1
 #define WINDOW_MAXIUMUM_NUMBER_OF_WIDGETS 2
 
 typedef struct window_s

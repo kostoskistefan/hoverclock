@@ -10,7 +10,6 @@ void display_server_create(display_server_s *const display_server)
     if (xcb_connection_has_error(display_server->connection))
     {
         insight_error("Failed to establish X Server connection");
-        free(display_server);
         exit(EXIT_FAILURE);
     }
 

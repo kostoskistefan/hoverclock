@@ -10,7 +10,7 @@
 #define LABEL_SHADOW_BLUR_PASSES   2
 #define LABEL_SHADOW_BLUR_BOX_SIZE ((uint32_t) ((LABEL_SHADOW_BLUR_RADIUS + 0.5) * 2))
 #define LABEL_VERTICAL_PADDING     (LABEL_SHADOW_BLUR_RADIUS)
-#define LABEL_HORIZONTAL_PADDING   10
+#define LABEL_HORIZONTAL_PADDING   2
 
 char *label_get_font_path_by_font_name(const char *font_name);
 void label_render_character(
