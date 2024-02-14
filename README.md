@@ -87,14 +87,31 @@ The last three dependencies are libraries that I've built in the past and are pa
  * GCC
  * Meson
 
-## Build from source
+## Installation
+
+### Arch based Linux distributions
+
+There is an [AUR package](https://aur.archlinux.org/packages/hoverclock-git) available for a more convenient installation process.
+
+If you use an AUR helper like `yay` for example, you can install Hoverclock with the following command: `yay -S hoverclock-git`
+
+Otherwise, you can follow the next steps:
+ 1. Clone the AUR package: `git clone https://aur.archlinux.org/hoverclock-git.git`
+ 2. Go into the cloned directory: `cd hoverclock-git`
+ 3. Run the build script: `makepkg -si`
+
+This will install `hoverclock` in `/usr/bin`, which should be added to your `$PATH` environment variable. Then you can run `hoverclock` from anywhere in a terminal.
+
+### Other distributions - Build from source
 
  1. Clone this repository: `git clone https://github.com/kostoskistefan/hoverclock.git`
  2. Go into the cloned directory: `cd hoverclock`
- 3. Let Meson setup its build directory: `meson setup build`
+ 3. Let Meson setup its build directory: `meson setup build -prefix=/usr`
  4. Take a look at Meson's output and check if any dependencies are missing. If so, install them using the package manager on your Linux distro of choice.
- 5. Use meson to compile hoverclock: `meson compile -C build`
- 6. Hoverclock is ready and can be run with the following command (assuming you are still in the root of cloned directory): `./build/hoverclock`
+ 5. Use Meson to compile hoverclock: `meson compile -C build`
+ 6. (Optionally) You can use Meson to install Hoverclock: `meson install -C build --skip-subprojects --destdir /usr/bin`
+
+If you chose to skit the 6th step, the compiled binary can be run with the following command (assuming you are still in the root of cloned directory): `./build/hoverclock`
 
 ## Contributing
 
