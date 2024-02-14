@@ -5,7 +5,6 @@ project(
   license: 'MIT',
   default_options: [
     'warning_level=3',
-    'buildtype=release',
   ],
 )
 
@@ -34,5 +33,4 @@ hoverclock_executable = executable(
   hoverclock_sources,
   dependencies: hoverclock_dependencies,
   install: true,
-  install_dir: '/usr/bin',
 )
