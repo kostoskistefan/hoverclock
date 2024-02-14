@@ -32,4 +32,6 @@ hoverclock_executable = executable(
   'hoverclock',
   hoverclock_sources,
   dependencies: hoverclock_dependencies,
+  install: true,
+  install_dir: '/usr/bin',
 )
