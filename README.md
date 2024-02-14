@@ -100,7 +100,7 @@ Otherwise, you can follow the next steps:
  2. Go into the cloned directory: `cd hoverclock-git`
  3. Run the build script: `makepkg -si`
 
-This will install `hoverclock` in `/usr/bin`, which should be added to your `$PATH` environment variable. Then you can run `hoverclock` from anywhere in a terminal.
+This will install `hoverclock` in `/usr/bin`, which should already be in your `$PATH` environment variable.
 
 ### Other distributions - Build from source
 
