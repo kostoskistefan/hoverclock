@@ -106,12 +106,12 @@ This will install `hoverclock` in `/usr/bin`, which should already be in your `$
 
  1. Clone this repository: `git clone https://github.com/kostoskistefan/hoverclock.git`
  2. Go into the cloned directory: `cd hoverclock`
- 3. Let Meson setup its build directory: `meson setup build -prefix=/usr`
+ 3. Let Meson setup its build directory: `meson setup build --prefix=/usr`
  4. Take a look at Meson's output and check if any dependencies are missing. If so, install them using the package manager on your Linux distro of choice.
  5. Use Meson to compile hoverclock: `meson compile -C build`
- 6. (Optionally) You can use Meson to install Hoverclock: `meson install -C build --skip-subprojects --destdir /usr/bin`
+ 6. (Optionally) You can use Meson to install Hoverclock: `meson install -C build --skip-subprojects`
 
-If you chose to skit the 6th step, the compiled binary can be run with the following command (assuming you are still in the root of cloned directory): `./build/hoverclock`
+If you choose to skip the 6th step, the compiled binary can be run with the following command (assuming you are still in the root of the cloned directory): `./build/hoverclock`
 
 ## Contributing
 
